@@ -5,54 +5,34 @@
    <link rel="stylesheet" href="carousel.css" />
      <script src="carousel.js"></script>
   
-     <div class="gallery">
-     <div class="gallery-container" src="https://i.postimg.cc/ydKNkQmr/spirited-away-kaonashi-wallpaper.jpg">
-       <img class="gallery-item1" src="https://i.postimg.cc/VkyPfSBK/images-3.jpg">
-       <img class="gallery-item2" src="https://i.postimg.cc/dVcgMbwX/wp8576079.png">
-       <img class="gallery-item3" src="https://i.postimg.cc/fy0qpKFD/spirited-away-nawpic-25.jpg">
-       <img class="gallery-item4" src="https://i.postimg.cc/fy0qpKFD/spirited-away-nawpic-25.jpg">
-       <img class="gallery-item5" src="https://i.postimg.cc/52GgdvBt/images-6.jpg">
-     </div>
-     <div class="gallery-controls"></div>
-   </div>
-
+     
+<div class="container">
+  <div class="button" onclick="shiftLeft()"><img src="https://image.ibb.co/mRsEb7/left_arrow.png" alt=""></div>
+  <div class="cards-wrapper">
+      <ul class="cards__container">
+          <li class="box" style="background-color:red">box 1</li>
  
-
+<li class="box">box 2</li>
+          <li class="box">box 3</li>
+          <li class="box">box 4</li>
+          <li class="box">box 5</li>
+          <li class="box box--hide">box 6</li>
+          <li class="box box--hide">box 7</li>
+      </ul>
+      <div class="card__text-content">
+          <h3 class="card__title">The Famous Five</h3>
+          <div class="card__summary">The Famous Five is a series of children's adventure novels written by English author Enid Blyton. The first book, Five on a Treasure Island, was published in 1942.</div>
+      </div>
+  </div>
+  <div class="button" onclick="shiftRight()"><img src="https://image.ibb.co/dfPSw7/right_arrow.png" alt=""></div>
+</div>
  
   
    
-* { box-sizing: border-box; }
 
-body { font-family: sans-serif; }
 
-.gallery {
-  background: #FAFAFA;
-}
 
-.div {
-  width: 66%;
-  height: 200px;
-  margin-right: 10px;
-  background: #8C8;
-  border-radius: 5px;
-  counter-increment: carousel-cell;
-}
-
-/* cell number */
-.gallery-cell:before {
-  display: block;
-  text-align: center;
-  content: counter(carousel-cell);
-  line-height: 200px;
-  font-size: 80px;
-  color: white;
-}
-
-/* gallery focus */
-.flickity-enabled:focus .flickity-viewport {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-}
+ 
  
  
 <script>
