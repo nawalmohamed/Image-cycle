@@ -1,11 +1,16 @@
 <html>
  
+ 
   <body>
     
    <link rel="stylesheet" href="carousel.css" />
-     <script src="carousel.js"></script>
+   <script src="carousel.js"></script>
    
-  
+   <body onload="var start=setInterval('changeBanner()', 10000;">
+    <div id="wrapper">
+        <div>
+            <img src="budda.JPG" width="900px" height="300px" />
+        </div>
    
    
      
@@ -58,16 +63,13 @@ div.gallery img {
 
  
  
- 
- 
-<script type="text/javascript">
+ <script type="text/javascript">
     function changeBanner(){
         var img = new array
 
         img[0] = document.images[0].src="https://i.postimg.cc/ydKNkQmr/spirited-away-kaonashi-wallpaper.jpg"
         img[1] = document.images[1].src="https://i.postimg.cc/VkyPfSBK/images-3.jpg"
         img[2] = document.images[2].src="https://i.postimg.cc/dVcgMbwX/wp8576079.png"
-        
 
         var currentimg = img[0]
 
@@ -78,33 +80,13 @@ div.gallery img {
         if(currentimg == img[1]) {
             currentimg = img[2]
         }
+    }
+
+ 
+
 
   document.getElementById("p1").innerHTML = "New text!";
   
-var Pictures;
-
-
-Pictures = ['https://i.postimg.cc/wj4CX1tf/image-123986672-4.jpg', 'https://i.postimg.cc/x14wKwwK/image-6483441.jpg', 'https://i.postimg.cc/cCLhkHY6/image-6483441-2.jpg', 'https://i.postimg.cc/MTPVTYMK/image-6483441-7.jpg', 'https://i.postimg.cc/x8fprgrf/image-6483441-1.jpg', 'https://i.postimg.cc/gkwqx1K9/image-6483441-6.jpg', 'https://i.postimg.cc/1RdD1J1v/image-6483441-11.jpg', 'https://i.postimg.cc/zDnJYv1Q/image-123986672-2.jpg', 'https://i.postimg.cc/s1FBQHVy/image-6483441-12.jpg', 'https://i.postimg.cc/c4s2PRwk/image-123986672-3.jpg'];
-let element_image = document.getElementById('image');
-Pictures.push(Pictures[0]);
-element_image.setAttribute("src", Pictures.shift());
-
-
-document.getElementById('turn').addEventListener('click', (event) => {
-  let element_image2 = document.getElementById('image');
-  Pictures.push(Pictures[0]);
-  element_image2.setAttribute("src", Pictures.shift());
-
-});
-
-document.getElementById('turn ').addEventListener('click', (event) => {
-  let element_image3 = document.getElementById('image');
-  Pictures.unshift(Pictures.slice(-1)[0]);
-  element_image3.setAttribute("src", Pictures.pop());
-
-});
-
-
 </script>
 
 
