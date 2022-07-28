@@ -4,7 +4,11 @@
     
    <link rel="stylesheet" href="carousel.css" />
      <script src="carousel.js"></script>
-  
+   
+  <div class="gallery js-flickity"
+  data-flickity-options='{ "wrapAround": true }'>
+   
+   
      
 <div class="gallery-container">
   <div class="button" onclick="shiftLeft()"><img src="https://image.ibb.co/mRsEb7/left_arrow.png" width="50%" height="50%"></div>
@@ -33,25 +37,33 @@
 
 <style>
  
- div.gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 180px;
+ * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-div.gallery:hover {
-  border: 1px solid #777;
+body { font-family: sans-serif; }
+
+.gallery {
+  background: #EEE;
 }
 
-div.gallery img {
-  width: 100%;
-  height: auto;
+.gallery-cell {
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8C8;
+  counter-increment: gallery-cell;
 }
 
-div.desc {
-  padding: 15px;
+/* cell number */
+.gallery-cell:before {
+  display: block;
   text-align: center;
+  content: counter(gallery-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
 }
   
    
