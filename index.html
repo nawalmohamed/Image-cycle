@@ -5,16 +5,14 @@
    <link rel="stylesheet" href="carousel.css" />
      <script src="carousel.js"></script>
    
-  <div class="gallery js-flickity"
-  data-flickity-options='{ "wrapAround": true }'>
+  
    
    
      
 <div class="gallery-container">
-  <div class="button" onclick="shiftLeft()"><img src="https://image.ibb.co/mRsEb7/left_arrow.png" width="50%" height="50%"></div>
+  <div class="button" onclick="shiftLeft()"><img src="https://image.ibb.co/mRsEb7/left_arrow.png" alt="left-arrow"></div>
   <div class="cards-wrapper">
-      <div class="cards__container">
-          <div class="box" style="background-color:black"></div>
+      
  
          <div class="gallery">
     <img class="gallery-item" src="https://i.postimg.cc/ydKNkQmr/spirited-away-kaonashi-wallpaper.jpg">
@@ -32,45 +30,30 @@
           <div class="card__summary">Spirited Away tells the story of Chihiro Ogino, a ten-year-old who, while moving to a new neighborhood, enters the world of Kamo (spirits of Japanese)</div>
       </div>
   </div>
-  <div class="button" onclick="shiftRight()"><img src="https://image.ibb.co/dfPSw7/right_arrow.png" alt=""></div>
+  <div class="button" onclick="shiftRight()"><img src="https://image.ibb.co/dfPSw7/right_arrow.png" alt="right-arrow"></div>
 </div>
 
 <style>
  
- * {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
 }
 
-body { font-family: sans-serif; }
-
-.gallery {
-  background: #EEE;
+div.gallery:hover {
+  border: 1px solid #777;
 }
 
-.gallery-cell {
-  width: 66%;
-  height: 200px;
-  margin-right: 10px;
-  background: #8C8;
-  counter-increment: gallery-cell;
-}
-
-/* cell number */
-.gallery-cell:before {
-  display: block;
-  text-align: center;
-  content: counter(gallery-cell);
-  line-height: 200px;
-  font-size: 80px;
-  color: white;
+div.gallery img {
+  width: 100%;
+  height: auto;
 }
   
    
    
-   
-   
-   </style>
+ </style>
    
 
  
