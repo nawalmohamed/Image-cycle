@@ -173,28 +173,6 @@ body{
     counter = 1;
    }
   }; 5000};
-var Pictures;
-
-
-Pictures = ['https://i.postimg.cc/ydKNkQmr/spirited-away-kaonashi-wallpaper.jpg', 'https://i.postimg.cc/VkyPfSBK/images-3.jpg', 'https://i.postimg.cc/dVcgMbwX/wp8576079.png', 'https://i.postimg.cc/fy0qpKFD/spirited-away-nawpic-25.jpg', 'https://i.postimg.cc/fy0qpKFD/spirited-away-nawpic-25.jpg', 'https://i.postimg.cc/52GgdvBt/images-6.jpg', 'https://i.postimg.cc/C1JfYT34/1062086.jpg', 'https://i.postimg.cc/1Xf4Qgc9/images-4.jpg', 'https://i.postimg.cc/76QYmHvj/images-5.jpg'];
-let element_image = document.getElementById('image');
-Pictures.push(Pictures[0]);
-element_image.setAttribute("src", Pictures.shift());
-
-
-document.getElementById('button-next').addEventListener('click', (event) => {
-  let element_image2 = document.getElementById('image');
-  Pictures.push(Pictures[0]);
-  element_image2.setAttribute("src", Pictures.shift());
-
-});
-
-document.getElementById('button-next').addEventListener('click', (event) => {
-  let element_image3 = document.getElementById('image');
-  Pictures.unshift(Pictures[0]);
-  element_image3.setAttribute("src", Pictures.shift());
-
-});
   
 </script>
 
