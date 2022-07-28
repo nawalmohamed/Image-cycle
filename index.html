@@ -124,6 +124,10 @@ body{
   
   .navigation-auto{
    position: absolute;
+   display: flex;
+   width: 800px;
+   justify-content: center;
+   margin-top: 460px;
   }
   
   .navigattion-auto div{
@@ -133,6 +137,23 @@ body{
    transition: 1s;
   }
   
+  .navigation-auto div:not(:last-child){
+   margin-right: 40px;
+  }
+  
+  #radio1:checked ~ .navigation-auto .auto-btn1{
+   background: #40D3DC;
+  }
+  radio2:checked ~ .navigation-auto .auto-btn2{
+   background: #40D3DC;
+  }
+  radio3:checked ~ .navigation-auto .auto-btn3{
+   background: #40D3DC;
+  }
+  radio4:checked ~ .navigation-auto .auto-btn4{
+   background: #40D3DC;
+  }
+   
  </style>
    
   
@@ -144,28 +165,30 @@ body{
  
  
  <script type="text/javascript">
-    function changeBanner(){
-        var img = new array
-
-        img[0] = document.images[0].src="https://i.postimg.cc/ydKNkQmr/spirited-away-kaonashi-wallpaper.jpg"
-        img[1] = document.images[1].src="https://i.postimg.cc/VkyPfSBK/images-3.jpg"
-        img[2] = document.images[2].src="https://i.postimg.cc/dVcgMbwX/wp8576079.png"
-
-        var currentimg = img[0]
-
-        if(currentimg == img[0]) {
-            currentimg = img[1]
-        }
-
-        if(currentimg == img[1]) {
-            currentimg = img[2]
-        }
-    }
-
- 
-
-
   document.getElementById("p1").innerHTML = "New text!";
+   var Pictures;
+
+
+Pictures = ['https://i.postimg.cc/ydKNkQmr/spirited-away-kaonashi-wallpaper.jpg', 'https://i.postimg.cc/VkyPfSBK/images-3.jpg', 'https://i.postimg.cc/dVcgMbwX/wp8576079.png', 'https://i.postimg.cc/fy0qpKFD/spirited-away-nawpic-25.jpg', 'https://i.postimg.cc/fy0qpKFD/spirited-away-nawpic-25.jpg', 'https://i.postimg.cc/52GgdvBt/images-6.jpg', 'https://i.postimg.cc/C1JfYT34/1062086.jpg', 'https://i.postimg.cc/1Xf4Qgc9/images-4.jpg', 'https://i.postimg.cc/76QYmHvj/images-5.jpg'];
+let element_image = document.getElementById('image');
+Pictures.push(Pictures[0]);
+element_image.setAttribute("src", Pictures.shift());
+
+
+document.getElementById('button-next').addEventListener('click', (event) => {
+  let element_image2 = document.getElementById('image');
+  Pictures.push(Pictures[0]);
+  element_image2.setAttribute("src", Pictures.shift());
+
+});
+
+document.getElementById('button-next').addEventListener('click', (event) => {
+  let element_image3 = document.getElementById('image');
+  Pictures.unshift(Pictures[0]);
+  element_image3.setAttribute("src", Pictures.shift());
+
+});
+
   
 </script>
 
