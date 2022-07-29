@@ -1,168 +1,117 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
- <head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="style.css"/>
-  <title>Image Carousal</title>
-  
- </head>
-  <body>
-   
-  <div class="slider">
-    <div class="slides">
 
-     <input type="radio" name="radio-btn" id="radio1">
-     <input type="radio" name="radio-btn" id="radio2">
-     <input type="radio" name="radio-btn" id="radio3">
-     <input type="radio" name="radio-btn" id="radio4">
-     
-     <div class="slide first">
-      <img src="https://i.postimg.cc/ydKNkQmr/spirited-away-kaonashi-wallpaper.jpg" alt="cartoon">
-     </div>
-     <div class="slide first">
-      <img src="https://i.postimg.cc/zBFjNbjH/wp9659706.jpg" alt="cartoon">
-     </div>
-     <div class="slide first">
-      <img src="https://i.postimg.cc/dVcgMbwX/wp8576079.png" alt="cartoon">
-     </div>
-     <div class="slide first">
-      <img src="https://i.postimg.cc/zBFjNbjH/wp9659706.jpg" alt="cartoon">
-     </div>
-     
-     <div class="navigation-auto">
-      <div class="auto-btn1"></div>
-      <div class="auto-btn2"></div>
-      <div class="auto-btn3"></div>
-      <div class="auto-btn4"></div>
-     </div>
-     
-     <!--automatic navigation end-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Sandbox</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+            overflow: hidden;
+        }
+
+        .slide-container {
+            width: 100%;
+            height:85vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background-color: rgb(110, 110, 250);
+        }
+
+        .image-slider{
+            width: 100%;
+            height: 600px;
+            position: absolute;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 1s;
+        }
+        
+        .slides-div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 30px;
+        }
+
+        .img{
+            position: relative;
+            width: 240px;
+            height: 370px;
+            transition: 0.5s;
+        }
+
+        .button {
+            position: absolute;
+            width: 240px;
+            height: 370px;
+            transition: 0.5s;
+            background-color: rgba(67, 67, 151, 0.2);
+        }
+
+        #slider-span1:target ~ .image-slider #img1,
+        #slider-span1:target ~.image-slider #button-1{
+            width:380px;
+            height: 585px;
+            background-color: transparent;
+        }
+        #slider-span2:target ~ .image-slider #img2,
+        #slider-span2:target ~.image-slider #button-2{
+            width:380px;
+            height: 585px;
+            background-color: transparent;
+        }
+        #slider-span3:target ~ .image-slider #img3,
+        #slider-span3:target ~.image-slider #button-3{
+            width:380px;
+            height: 585px;
+            background-color: transparent;
+        }
+
+        #slider-span1:target ~.image-slider{
+            left:20%;
+        }
+        #slider-span2:target ~.image-slider{
+            left:0%;
+        }
+        #slider-span3:target ~.image-slider{
+            left:-20%;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <span class="slider-span" id="slider-span1"></span>
+        <span class="slider-span" id="slider-span2"></span>
+        <span class="slider-span" id="slider-span3"></span>
+
+        <div class="image-slider">
+            <div class="slides-div" id="slide-1">
+                <img src="images/headset.jpg" alt="" class="img" id="img1">
+                <a href="#slider-span1" class="button" id="button-1"></a>
+            </div>
+            <div class="slides-div" id="slide-2">
+                <img src="images/headset.jpg" alt="" class="img" id="img2">
+                <a href="#slider-span2" class="button" id="button-2"></a>
+            </div>
+            <div class="slides-div" id="slide-3">
+                <img src="images/headset.jpg" alt="" class="img" id="img3">
+                <a href="#slider-span3" class="button" id="button-3"></a>
+            </div>
+        </div>
     </div>
-    <!--automatic navigation start-->
-    <div class="navigation-munual">
-     <label for="radio1" class="manual-btn"></label>
-     <label for="radio2" class="manual-btn"></label>
-     <label for="radio3" class="manual-btn"></label>
-     <label for="radio4" class="manual-btn"></label>
-    </div>
-    <!--manual navigation end-->
-    </div>
-   
-  
- <style>
- 
-  
-body{
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #40D3DC;
-  }
-  .slider{
-   width: 800px;
-   height: 500px;
-   border-radius: 10px;
-   overflow: hidden;
-  }
-  .slides{
-   width: 500%;
-   height: 500px;
-   display: flex;
-  }
-  
-  .slides input{
-   display: none;
-  }
-  
-  .slide{
-   width: 20%;
-   transition: 2s;
-  }
-   
-  
-  .slide img{
-   widht: 800px;
-   height: 500px;
-  }
-  /*css for manual slide navigation*/
-   .navigation-manual{
-   position: absolute;
-   width: 800px;
-   margin-top: -40px;
-   display: flex;
-   justify-content: center;
-  }
-  .manual-btn{
-   border: 2px solid #40D3DC;
-   padding: 5px;
-   border-radius: 10px;
-   cursor: pointer;
-   transition: 1s;
-  }
-  
-  .manual-btn:not(:last-child){
-   margin-right: 40px;
-  }
-  
-  .manual-btn:hover{
-   background: #40D3DC;
-  }
-  
-  #radio1:checked ~ .first{
-   margin-left: 0; 
-  }
-  #radio2:checked ~ .first{
-   margin-left: -20%; 
-  } 
-  #radio3:checked ~ .first{
-   margin-left: -40%; 
-  }
-  #radio4:checked ~ .first{
-   margin-left: -60%; 
-  }
-   
-  /*css for autamatic navigation*/
-  
-  
-  .navigation-auto{
-   position: absolute;
-   display: flex;
-   width: 800px;
-   justify-content: center;
-   margin-top: 460px;
-  }
-  
-  .navigation-auto div{
-   border: 2px solid #40D3DC;
-   padding: 5px;
-   border-radius: 10px;
-   transition: 1s;
-  }
-  
-  .navigation-auto div:not(:last-child){
-   margin-right: 40px;
-  }
-  
-  #radio1:checked ~ .navigation-auto .auto-btn1{
-   background: #40D3DC;
-  }
-  #radio2:checked ~ .navigation-auto .auto-btn2{
-   background: #40D3DC;
-  }
-  #radio3:checked ~ .navigation-auto .auto-btn3{
-   background: #40D3DC;
-  }
-  #radio4:checked ~ .navigation-auto .auto-btn4{
-   background: #40D3DC;
-  }
-  
- 
-  
-   
- </style>
+</body>
+</html>
+
    
   
    
