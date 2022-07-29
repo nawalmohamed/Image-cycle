@@ -5,8 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <h1>The textarea form attribute</h1>
+
+<form action="/action_page.php" id="usrform">
+  Name: <input type="text" name="usrname">
+  <input type="submit">
+</form>
+<br>
+<textarea rows="4" cols="50" name="comment" form="usrform">
+Enter text here...</textarea>
+
+<p>The text area above is outside the form element, but should still be a part of the form.</p>
+    
+    
     <title>Slider Sandbox</title>
     <style>
+        
         body{
             display: flex;
             align-items: center;
@@ -110,18 +125,7 @@
         </div>
     </div>
 
-    <style>
-        input[type=button], input[type=submit],
-        input[type=reset] {
-            background-color: white;
-            border: none;
-            color: white;
-            padding: 16px 32px;
-            text-decoration: none;
-            margin: 4px 2px;
-            cursor: pointer;
-        }
-    </style>
+   
    
   
    
