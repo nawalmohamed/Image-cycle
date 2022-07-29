@@ -179,31 +179,7 @@ body{
     counter = 1;
    }
   }; 5000};
-  var Pictures;
-
-
-Pictures = ['https://i.postimg.cc/ydKNkQmr/spirited-away-kaonashi-wallpaper.jpg', 'https://i.postimg.cc/zBFjNbjH/wp9659706.jpg', 'https://i.postimg.cc/dVcgMbwX/wp8576079.png', 'https://i.postimg.cc/zBFjNbjH/wp9659706.jpg'];
-let element_image = document.getElementById('image');
-Pictures.push(Pictures[0]);
-element_image.setAttribute("src", Pictures.shift());
-
-
-document.getElementById('turn').addEventListener('click', (event) => {
-  let element_image2 = document.getElementById('image');
-  Pictures.push(Pictures[0]);
-  element_image2.setAttribute("src", Pictures.shift());
-
-});
-
-document.getElementById('turn ').addEventListener('click', (event) => {
-  let element_image3 = document.getElementById('image');
-  Pictures.unshift(Pictures.slice(-1)[0]);
-  element_image3.setAttribute("src", Pictures.pop());
-
-});
-
-
-</script>
+ 
 
   
 </script>
